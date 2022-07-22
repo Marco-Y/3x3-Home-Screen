@@ -3,6 +3,7 @@ float rect9Width, rect9Height;
 float rect9X1, rect9Y1, rect9X2, rect9Y2, rect9X3, rect9Y3, rect9X4, rect9Y4, rect9X5, rect9Y5, rect9X6, rect9Y6, rect9X7, rect9Y7, rect9X8, rect9Y8, rect9X9, rect9Y9;
 float startX1, startY1, startButtonWidth1, startButtonHeight1;
 float startX2, startY2, startButtonWidth2, startButtonHeight2;
+float okButtonX4, okButtonY4, okButtonWidth4, okButtonHeight4;
 //
 void populationVariables() {
   //rect9
@@ -35,4 +36,9 @@ void populationVariables() {
   startY2 = startY1;
   startButtonWidth2 = startButtonWidth1;
   startButtonHeight2 = startButtonHeight1;
+  //ok button in 4th rectangle
+  okButtonX4 = rect9X4;
+  okButtonY4 = rect9Y4+rect9Height*2/3;
+  okButtonWidth4 = rect9Width;
+  okButtonHeight4 = rect9Height*1/3;
 }
