@@ -1,5 +1,5 @@
 //Global Variables
-color buttonFill, resetWhite=#FFFFFF, black=#000000, red=#FF0000;
+color buttonFill, resetWhite=#FFFFFF, black=#000000, red=#FF0000, green=#00FF00, yellow=#FFFF00;
 Boolean startButton1ON=false, startButton2ON=false;
 //
 void setup() {
@@ -17,7 +17,7 @@ void setup() {
 }//End setup
 //
 void draw() {
-  //Hover-over
+  //Hover-over start button 1
   if ( mouseX> startX1 && mouseX< startX1+startButtonWidth1 && mouseY> startY1 && mouseY< startY1+startButtonHeight1 ) {
     buttonFill = black;
   } else {
@@ -25,7 +25,7 @@ void draw() {
   }//End Hover-over
   fill(buttonFill); //2-colors to start , remember nightMode adds choice
   rect(startX1, startY1, startButtonWidth1, startButtonHeight1);
-  //Hover-over
+  //Hover-over start button 2
   if ( mouseX> startX2 && mouseX< startX2+startButtonWidth2 && mouseY> startY2 && mouseY< startY2+startButtonHeight2 ) {
     buttonFill = black;
   } else {
@@ -33,12 +33,33 @@ void draw() {
   }//End Hover-over
   fill(buttonFill); //2-colors to start , remember nightMode adds choice
   rect(startX2, startY2, startButtonWidth2, startButtonHeight2);
+  /*Hover-over OK BUTTON
+   if ( mouseX> okButtonX4 && mouseX< okButtonX4+okButtonWidth4 && mouseY> okButtonY4 && mouseY< okButtonHeight4 ) {
+   buttonFill = green;
+   } else {
+   buttonFill = red;
+   }//End Hover-over OK BUTTON
+   fill(buttonFill); //2-colors to start , remember nightMode adds choice
+   rect(okButtonX4, okButtonY4, okButtonWidth4, okButtonHeight4);
+   */
+  //
+  //
   fill(resetWhite);
   //
   if ( startButton1ON==true ) {
     rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
     choice1Text1();
+    //Hover-over OK BUTTON
+    if ( mouseX> okButtonX4 && mouseX< okButtonX4+okButtonWidth4 && mouseY> okButtonY4 && mouseY< okButtonY4+okButtonHeight4 ) {
+      buttonFill = green;
+    } else {
+      buttonFill = yellow;
+    }//End Hover-over OK BUTTON
+    fill(buttonFill); //2-colors to start , remember nightMode adds choice
     rect(okButtonX4, okButtonY4, okButtonWidth4, okButtonHeight4);
+    //rect(okButtonX4, okButtonY4, okButtonWidth4, okButtonHeight4);
+    oogwayImage();
+    oogwayImage= loadImage("../Images Used/
     okText4();
   }//Button 1
   if ( startButton2ON==true ) {

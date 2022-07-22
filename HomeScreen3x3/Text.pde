@@ -5,9 +5,9 @@ float startTextX1, startTextY1, startTextWidth1, startTextHeight1;
 PFont startTextFont1;
 String startText2 = "or this";
 float startTextX2, startTextY2, startTextWidth2, startTextHeight2;
-String choice1Text1 = "type later test first";
+String choice1Text1 = "You teleported to another world and became a turtle";
 float choice1TextX1, choice1TextY1, choice1TextWidth1, choice1TextHeight1;
-String okText4 = "type later test first";
+String okText4 = "OK BRUH";
 float okTextX4, okTextY4, okTextWidth4, okTextHeight4;
 //
 void startText1() {
@@ -40,10 +40,10 @@ void choice1Text1() {
   choice1TextX1 = rect9X4;
   choice1TextY1 = rect9Y4;
   choice1TextWidth1 = rect9Width;
-  choice1TextHeight1 = rect9Height*2/3;
+  choice1TextHeight1 = rect9Height*1/6;
   //
   fill(red);
-  textAlign(CENTER, CENTER);
+  textAlign(CENTER, TOP);
   textFont(startTextFont1, startTextSize);
   text(choice1Text1, choice1TextX1, choice1TextY1, choice1TextWidth1, choice1TextHeight1);
   fill(resetWhite);
