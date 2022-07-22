@@ -36,9 +36,11 @@ void populationVariables() {
   startY2 = startY1;
   startButtonWidth2 = startButtonWidth1;
   startButtonHeight2 = startButtonHeight1;
-  //ok button in 4th rectangle
+  //4th rect ok button
   okButtonX4 = rect9X4;
-  okButtonY4 = rect9Y4+rect9Height*2/3;
+  okButtonY4 = rect9Y4+rect9Height*5/6;
   okButtonWidth4 = rect9Width;
-  okButtonHeight4 = rect9Height*1/3;
+  okButtonHeight4 = rect9Height*1/6;
+  //1st rect accept/decline
+
 }
