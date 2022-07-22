@@ -1,6 +1,6 @@
 //Global Variables
 color buttonFill, resetWhite=#FFFFFF, black=#000000, red=#FF0000, green=#00FF00, yellow=#FFFF00;
-Boolean startButton1ON=false, startButton2ON=false;
+Boolean startButton1ON=false, startButton2ON=false, okButton4ON=false;
 //
 void setup() {
   size(1200, 750);
@@ -57,14 +57,24 @@ void draw() {
     }//End Hover-over OK BUTTON
     fill(buttonFill); //2-colors to start , remember nightMode adds choice
     rect(okButtonX4, okButtonY4, okButtonWidth4, okButtonHeight4);
-    //rect(okButtonX4, okButtonY4, okButtonWidth4, okButtonHeight4);
     oogwayImage();
-    oogwayImage= loadImage("../Images Used/
+    oogwayImage= loadImage("../Images Used/quotesthatprovemasteroogwayfromkungfupandaisthegreatestteachereverh_1427201176.jpeg");
+    image(oogwayImage, oogwayImageX, oogwayImageY, oogwayImageWidth, oogwayImageHeight);
     okText4();
-  }//Button 1
+  }//End START Button 1
+  //
   if ( startButton2ON==true ) {
     rect( startX1, startY1, startButtonWidth1, startButtonHeight1 );
-  }//Button 2
+  }//End START Button 2
+  //
+  if ( okButton4ON==true ) {
+   rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
+   rabbitStandingImage();
+   rabbitStandingImage= loadImage("../Images Used/standing.jpeg");
+   image(rabbitStandingImage, rabbitStandingImageX, rabbitStandingImageY, rabbitStandingImageWidth, rabbitStandingImageHeight);
+   choice1Text2();
+  }//End okButton 4th rect
+  //
   startImage();
   startImage= loadImage("../Images Used/495468.png"); //width 512 height 512
   image(startImage, startImageX, startImageY, startImageWidth, startImageHeight);
@@ -81,6 +91,7 @@ void mousePressed() {
   startButton2ON=false;
   if ( mouseX>=startX1 && mouseX<=startX1+startButtonWidth1 && mouseY>=startY1 && mouseY<=startY1+startButtonHeight1 ) startButton1ON=true;
   if ( mouseX>=startX2 && mouseX<=startX2+startButtonWidth2 && mouseY>=startY2 && mouseY<=startY1+startButtonHeight2 ) startButton2ON=true;
+  if ( mouseX>=okButtonX4 && mouseX<=okButtonX4+okButtonWidth4 && mouseY>=okButtonY4 && mouseY<=okButtonY4+okButtonHeight4 ) okButton4ON=true;
 }//End mousePressed
 //
 //End MAIN Program

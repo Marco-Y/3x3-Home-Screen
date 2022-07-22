@@ -2,13 +2,15 @@
 int startTextSize = 25;
 String startText1 = "Choose this";
 float startTextX1, startTextY1, startTextWidth1, startTextHeight1;
-PFont startTextFont1;
+PFont startTextFont1, choice1TextFont1;
 String startText2 = "or this";
 float startTextX2, startTextY2, startTextWidth2, startTextHeight2;
-String choice1Text1 = "You teleported to another world and became a turtle";
+String choice1Text1 = "You died and reincarnated into a turtle";
 float choice1TextX1, choice1TextY1, choice1TextWidth1, choice1TextHeight1;
 String okText4 = "OK BRUH";
 float okTextX4, okTextY4, okTextWidth4, okTextHeight4;
+String choice1Text2 = "A rabbit stood in front of you and said \n 'HEY DUDE WANNA BATTLE?'";
+float choice1TextX2, choice1TextY2, choice1TextWidth2, choice1TextHeight2;
 //
 void startText1() {
   //Population
@@ -40,11 +42,12 @@ void choice1Text1() {
   choice1TextX1 = rect9X4;
   choice1TextY1 = rect9Y4;
   choice1TextWidth1 = rect9Width;
-  choice1TextHeight1 = rect9Height*1/6;
+  choice1TextHeight1 = rect9Height*1/3;
+  choice1TextFont1 = createFont("TimesNewRomanPSMT", 603);
   //
-  fill(red);
-  textAlign(CENTER, TOP);
-  textFont(startTextFont1, startTextSize);
+  fill(black);
+  textAlign(CENTER, CENTER);
+  textFont(choice1TextFont1, startTextSize);
   text(choice1Text1, choice1TextX1, choice1TextY1, choice1TextWidth1, choice1TextHeight1);
   fill(resetWhite);
 }//End choice1Text1
@@ -52,9 +55,9 @@ void choice1Text1() {
 void okText4() {
   //Population
   okTextX4 = rect9X4;
-  okTextY4 = rect9Y4+rect9Height*2/3;
+  okTextY4 = rect9Y4+rect9Height*5/6;
   okTextWidth4 = rect9Width;
-  okTextHeight4 = rect9Height*1/3;
+  okTextHeight4 = rect9Height*1/6;
   //
   fill(black);
   textAlign(CENTER, CENTER);
@@ -62,3 +65,18 @@ void okText4() {
   text(okText4, okTextX4, okTextY4, okTextWidth4, okTextHeight4);
   fill(resetWhite);
 }//End choice1Text1
+//
+void choice1Text2() {
+  //Population
+  choice1TextX2 = rect9X1;
+  choice1TextY2 = rect9X1;
+  choice1TextWidth2 = rect9Width;
+  choice1TextHeight2 = rect9Height*1/3;
+  //
+  fill(black);
+  textAlign(CENTER, TOP);
+  textFont(choice1TextFont1, startTextSize);
+  text(choice1Text2, choice1TextX2, choice1TextY2, choice1TextWidth2, choice1TextHeight2);
+  fill(resetWhite);
+}//End choice1Text2
+//
