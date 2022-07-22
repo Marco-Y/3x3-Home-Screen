@@ -73,6 +73,11 @@ void draw() {
    rabbitStandingImage= loadImage("../Images Used/standing.jpeg");
    image(rabbitStandingImage, rabbitStandingImageX, rabbitStandingImageY, rabbitStandingImageWidth, rabbitStandingImageHeight);
    choice1Text2();
+   fill(green);
+   rect(acceptButtonX1, acceptButtonY1, acceptButtonWidth1, acceptButtonHeight1);
+   fill(red);
+   rect(declineButtonX1, declineButtonY1, declineButtonWidth1, declineButtonHeight1);
+   acceptText1();
   }//End okButton 4th rect
   //
   startImage();

@@ -2,7 +2,7 @@
 int startTextSize = 25;
 String startText1 = "Choose this";
 float startTextX1, startTextY1, startTextWidth1, startTextHeight1;
-PFont startTextFont1, choice1TextFont1;
+PFont startTextFont1, choice1TextFont1, choice1TextFontBold;
 String startText2 = "or this";
 float startTextX2, startTextY2, startTextWidth2, startTextHeight2;
 String choice1Text1 = "You died and reincarnated into a turtle";
@@ -11,6 +11,8 @@ String okText4 = "OK BRUH";
 float okTextX4, okTextY4, okTextWidth4, okTextHeight4;
 String choice1Text2 = "A rabbit stood in front of you and said \n 'HEY DUDE WANNA BATTLE?'";
 float choice1TextX2, choice1TextY2, choice1TextWidth2, choice1TextHeight2;
+String acceptText1 = "Accept";
+float acceptTextX1, acceptTextY1, acceptTextWidth1, acceptTextHeight1;
 //
 void startText1() {
   //Population
@@ -80,3 +82,16 @@ void choice1Text2() {
   fill(resetWhite);
 }//End choice1Text2
 //
+void acceptText1() {
+  //Population
+  acceptTextX1 = acceptButtonX1;
+  acceptTextY1 = acceptButtonY1;
+  acceptTextWidth1 = acceptButtonWidth1;
+  acceptTextHeight1 = acceptButtonHeight1;
+  choice1TextFontBold = createFont("TimesNewRomanPS-BoldMT", 602);
+  //
+  fill(resetWhite);
+  textAlign(CENTER, CENTER);
+  textFont(choice1TextFontBold, startTextSize); //CHANGE TO BOLD
+  text(acceptText1, acceptTextX1, acceptTextY1, acceptTextWidth1, acceptTextHeight1);
+}//End choice1Text1
