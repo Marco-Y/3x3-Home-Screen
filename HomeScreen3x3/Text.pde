@@ -40,7 +40,6 @@ void choice1Text1() {
   choice1TextWidth1 = rect9Width;
   choice1TextHeight1 = rect9Height*2/3;
   //
-  color(black);
   textAlign(CENTER, CENTER);
   textFont(startTextFont1, startTextSize);
   text(choice1Text1, choice1TextX1, choice1TextY1, choice1TextWidth1, choice1TextHeight1);
