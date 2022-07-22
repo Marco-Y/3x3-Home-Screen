@@ -7,6 +7,8 @@ String startText2 = "or this";
 float startTextX2, startTextY2, startTextWidth2, startTextHeight2;
 String choice1Text1 = "type later test first";
 float choice1TextX1, choice1TextY1, choice1TextWidth1, choice1TextHeight1;
+String okText4 = "type later test first";
+float okTextX4, okTextY4, okTextWidth4, okTextHeight4;
 //
 void startText1() {
   //Population
@@ -44,5 +46,19 @@ void choice1Text1() {
   textAlign(CENTER, CENTER);
   textFont(startTextFont1, startTextSize);
   text(choice1Text1, choice1TextX1, choice1TextY1, choice1TextWidth1, choice1TextHeight1);
+  fill(resetWhite);
+}//End choice1Text1
+//
+void okText4() {
+  //Population
+  okTextX4 = rect9X4;
+  okTextY4 = rect9Y4+rect9Height*2/3;
+  okTextWidth4 = rect9Width;
+  okTextHeight4 = rect9Height*1/3;
+  //
+  fill(black);
+  textAlign(CENTER, CENTER);
+  textFont(startTextFont1, startTextSize);
+  text(okText4, okTextX4, okTextY4, okTextWidth4, okTextHeight4);
   fill(resetWhite);
 }//End choice1Text1

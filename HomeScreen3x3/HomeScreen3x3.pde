@@ -39,6 +39,7 @@ void draw() {
     rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
     choice1Text1();
     rect(okButtonX4, okButtonY4, okButtonWidth4, okButtonHeight4);
+    okText4();
   }//Button 1
   if ( startButton2ON==true ) {
     rect( startX1, startY1, startButtonWidth1, startButtonHeight1 );
