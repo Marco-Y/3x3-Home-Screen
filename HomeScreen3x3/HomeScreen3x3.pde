@@ -1,5 +1,5 @@
 //Global Variables
-color buttonFill, resetWhite=#FFFFFF, black=#000000;
+color buttonFill, resetWhite=#FFFFFF, black=#000000, red=#FF0000;
 Boolean startButton1ON=false, startButton2ON=false;
 //
 void setup() {
@@ -21,7 +21,7 @@ void draw() {
   if ( mouseX> startX1 && mouseX< startX1+startButtonWidth1 && mouseY> startY1 && mouseY< startY1+startButtonHeight1 ) {
     buttonFill = black;
   } else {
-    buttonFill = resetWhite;
+    buttonFill = red;
   }//End Hover-over
   fill(buttonFill); //2-colors to start , remember nightMode adds choice
   rect(startX1, startY1, startButtonWidth1, startButtonHeight1);
@@ -29,7 +29,7 @@ void draw() {
   if ( mouseX> startX2 && mouseX< startX2+startButtonWidth2 && mouseY> startY2 && mouseY< startY2+startButtonHeight2 ) {
     buttonFill = black;
   } else {
-    buttonFill = resetWhite;
+    buttonFill = red;
   }//End Hover-over
   fill(buttonFill); //2-colors to start , remember nightMode adds choice
   rect(startX2, startY2, startButtonWidth2, startButtonHeight2);
