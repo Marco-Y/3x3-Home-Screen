@@ -27,11 +27,11 @@ void populationVariables() {
   rect9X9 = rect9X3;
   rect9Y9 = rect9Y7;
   //
-  startX1 = rect9X2;
+  startX1 = rect9X5;
   startY1 = rect9Y5;
   startButtonWidth1 = width*1/6;
   startButtonHeight1 = height*1/9;
-  startX2 = rect9X2 + width*1/6;
+  startX2 = startX1 + width*1/6;
   startY2 = startY1;
   startButtonWidth2 = startButtonWidth1;
   startButtonHeight2 = startButtonHeight1;

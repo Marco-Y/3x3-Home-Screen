@@ -33,6 +33,13 @@ void draw() {
   fill(buttonFill); //2-colors to start , remember nightMode adds choice
   rect(startX2, startY2, startButtonWidth2, startButtonHeight2);
   fill(resetWhite);
+  //
+  startImage();
+  startImage= loadImage("../Images Used/495468.png"); //width 512 height 512
+  image(startImage, startImageX, startImageY, startImageWidth, startImageHeight);
+  //
+  startText1();
+  startText2();
 }//End draw
 //
 void keyPressed() {
