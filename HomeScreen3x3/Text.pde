@@ -88,7 +88,7 @@ void acceptText1() {
   acceptTextY1 = acceptButtonY1;
   acceptTextWidth1 = acceptButtonWidth1;
   acceptTextHeight1 = acceptButtonHeight1;
-  choice1TextFontBold = createFont("TimesNewRomanPS-BoldMT", 602);
+  choice1TextFontBold = createFont("TimesNewRomanPS-BoldMT", 601);
   //
   fill(resetWhite);
   textAlign(CENTER, CENTER);
