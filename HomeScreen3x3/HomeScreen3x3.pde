@@ -1,5 +1,6 @@
 //Global Variables
 color buttonFill, resetWhite=#FFFFFF, black=#000000;
+Boolean startButton1ON=false, startButton2ON=false;
 //
 void setup() {
   size(1200, 750);
@@ -34,18 +35,41 @@ void draw() {
   rect(startX2, startY2, startButtonWidth2, startButtonHeight2);
   fill(resetWhite);
   //
+  if ( startButton1ON==true ) rect( startX1, startY1, startButtonWidth1, startButtonHeight1 ); //Button 1
+  if ( startButton2ON==true ) rect( startX2, startY2, startButtonWidth2, startButtonHeight2 ); //Button 2
+  //
   startImage();
   startImage= loadImage("../Images Used/495468.png"); //width 512 height 512
   image(startImage, startImageX, startImageY, startImageWidth, startImageHeight);
   //
   startText1();
   startText2();
+  choice1Text1();
 }//End draw
 //
 void keyPressed() {
 }//End keyPressed
 //
 void mousePressed() {
+  //ellipseON=false;
+  if ( mouseX>=startX1 && mouseX<=startX1+startButtonWidth1 && mouseY>=startY1 && mouseY<=startY1+startButtonHeight1 ) {
+    if ( startButton1ON=true) {
+      startButton1ON=false;
+      startButton2ON=true;
+    } else {
+      startButton1ON=true;
+      startButton2ON=false;
+    }
+  }//End Button1
+  if ( mouseX>=startX2 && mouseX<=startX2+startButtonWidth2 && mouseY>=startY2 && mouseY<=startY1+startButtonHeight2 ) {
+    if ( startButton2ON=true) {
+      startButton2ON=false;
+      startButton1ON=true;
+    } else {
+      startButton2ON=true;
+      startButton1ON=false;
+    }
+  }//End Button2
 }//End mousePressed
 //
 //End MAIN Program
