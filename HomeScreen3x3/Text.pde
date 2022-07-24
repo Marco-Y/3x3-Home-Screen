@@ -1,5 +1,5 @@
 //Global Variables
-int startTextSize = 25;
+int startTextSize = 25, smallerTextSize = 20;
 String startText1 = "Choose this";
 float startTextX1, startTextY1, startTextWidth1, startTextHeight1;
 PFont startTextFont1, choice1TextFont1, choice1TextFontBold;
@@ -15,6 +15,8 @@ String acceptText1 = "Accept";
 float acceptTextX1, acceptTextY1, acceptTextWidth1, acceptTextHeight1;
 String declineText1 = "Decline";
 float declineTextX1, declineTextY1, declineTextWidth1, declineTextHeight1;
+String acceptChoiceText1 = "'You have earned my respect with your bravery. One shall not harm you.'";
+float acceptChoiceTextX1, acceptChoiceTextY1, acceptChoiceTextWidth1, acceptChoiceTextHeight1;
 //
 void startText1() {
   //Population
@@ -73,12 +75,12 @@ void okText4() {
 void choice1Text2() {
   //Population
   choice1TextX2 = rect9X1;
-  choice1TextY2 = rect9X1;
+  choice1TextY2 = rect9Y1;
   choice1TextWidth2 = rect9Width;
   choice1TextHeight2 = rect9Height*1/3;
   //
   fill(black);
-  textAlign(CENTER, TOP);
+  textAlign(CENTER, CENTER);
   textFont(choice1TextFont1, startTextSize);
   text(choice1Text2, choice1TextX2, choice1TextY2, choice1TextWidth2, choice1TextHeight2);
   fill(resetWhite);
@@ -96,7 +98,7 @@ void acceptText1() {
   textAlign(CENTER, CENTER);
   textFont(choice1TextFontBold, startTextSize); //CHANGE TO BOLD
   text(acceptText1, acceptTextX1, acceptTextY1, acceptTextWidth1, acceptTextHeight1);
-}//End choice1Text1
+}//End acceptText1
 //
 void declineText1() {
   //Population
@@ -109,4 +111,17 @@ void declineText1() {
   textAlign(CENTER, CENTER);
   textFont(choice1TextFontBold, startTextSize); //CHANGE TO BOLD
   text(declineText1, declineTextX1, declineTextY1, declineTextWidth1, declineTextHeight1);
-}
+}//End declineText1
+//
+void acceptChoiceText1() {
+  acceptChoiceTextX1 = rect9X2;
+  acceptChoiceTextY1 = rect9Y2;
+  acceptChoiceTextWidth1 = rect9Width;
+  acceptChoiceTextHeight1 = rect9Height*1/3;
+  //
+  fill(black);
+  textAlign(CENTER, CENTER);
+  textFont(choice1TextFont1, startTextSize); //CHANGE TO BOLD
+  text(declineText1, acceptChoiceTextX1, acceptChoiceTextY1, acceptChoiceTextWidth1, acceptChoiceTextHeight1);
+  fill(resetWhite);
+}//End acceptChoiceText1()

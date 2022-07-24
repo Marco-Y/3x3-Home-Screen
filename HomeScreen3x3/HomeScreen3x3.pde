@@ -69,10 +69,13 @@ void draw() {
   //
   if ( okButton4ON==true ) {
    rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
+   choice1Text2();
    rabbitStandingImage();
    rabbitStandingImage= loadImage("../Images Used/standing.jpeg");
    image(rabbitStandingImage, rabbitStandingImageX, rabbitStandingImageY, rabbitStandingImageWidth, rabbitStandingImageHeight);
-   choice1Text2();
+   raceImage();
+   raceImage= loadImage("../Images Used/10687379345_555c9954a1_b.jpeg");
+   image(raceImage, raceImageX, raceImageY, raceImageWidth, raceImageHeight);
    fill(green);
    rect(acceptButtonX1, acceptButtonY1, acceptButtonWidth1, acceptButtonHeight1);
    fill(red);
