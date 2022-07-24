@@ -6,7 +6,7 @@ float oogwayImageX, oogwayImageY, oogwayImageWidth, oogwayImageHeight;
 PImage rabbitStandingImage;
 float rabbitStandingImageX, rabbitStandingImageY, rabbitStandingImageWidth, rabbitStandingImageHeight;
 PImage raceImage; //10687379345_555c9954a1_b.jpeg
-float
+//float
 //
 void startImage() {
   startImageX = rect9X5;
@@ -23,15 +23,15 @@ void oogwayImage() {
 }//End oogwayImage
 //
 void rabbitStandingImage() {
-  rabbitStandingImageX = rect9Width;
-  rabbitStandingImageY = rect9X1+choice1TextWidth2;
+  rabbitStandingImageX = rect9X1+choice1TextWidth2;
+  rabbitStandingImageY = rect9Y1+choice1TextHeight2;
   rabbitStandingImageWidth = rect9Width*1/2;
   rabbitStandingImageHeight = rect9Height*1/2;
-}//End rabbitTurtleImage
-//
+}//End rabbitStandingImage
+/*
 void raceImage() {
   raceImageX = ;
   raceImageY = ;
   raceImageWidth = ;
   raceImageHeight = ;
-}
+}*/
