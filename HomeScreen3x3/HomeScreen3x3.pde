@@ -78,6 +78,7 @@ void draw() {
    fill(red);
    rect(declineButtonX1, declineButtonY1, declineButtonWidth1, declineButtonHeight1);
    acceptText1();
+   declineText1();
   }//End okButton 4th rect
   //
   startImage();

@@ -9,10 +9,12 @@ String choice1Text1 = "You died and reincarnated into a turtle";
 float choice1TextX1, choice1TextY1, choice1TextWidth1, choice1TextHeight1;
 String okText4 = "OK BRUH";
 float okTextX4, okTextY4, okTextWidth4, okTextHeight4;
-String choice1Text2 = "A rabbit stood in front of you and said \n 'HEY DUDE WANNA BATTLE?'";
+String choice1Text2 = "A rabbit stood in front of you and said \n 'Fat dude over there wanna battle?'";
 float choice1TextX2, choice1TextY2, choice1TextWidth2, choice1TextHeight2;
 String acceptText1 = "Accept";
 float acceptTextX1, acceptTextY1, acceptTextWidth1, acceptTextHeight1;
+String declineText1 = "Decline";
+float declineTextX1, declineTextY1, declineTextWidth1, declineTextHeight1;
 //
 void startText1() {
   //Population
@@ -56,10 +58,10 @@ void choice1Text1() {
 //
 void okText4() {
   //Population
-  okTextX4 = rect9X4;
-  okTextY4 = rect9Y4+rect9Height*5/6;
-  okTextWidth4 = rect9Width;
-  okTextHeight4 = rect9Height*1/6;
+  okTextX4 = okButtonX4;
+  okTextY4 = okButtonY4;
+  okTextWidth4 = okButtonWidth4;
+  okTextHeight4 = okButtonHeight4;
   //
   fill(black);
   textAlign(CENTER, CENTER);
@@ -95,3 +97,16 @@ void acceptText1() {
   textFont(choice1TextFontBold, startTextSize); //CHANGE TO BOLD
   text(acceptText1, acceptTextX1, acceptTextY1, acceptTextWidth1, acceptTextHeight1);
 }//End choice1Text1
+//
+void declineText1() {
+  //Population
+  declineTextX1 = declineButtonX1;
+  declineTextY1 = declineButtonY1;
+  declineTextWidth1 = declineButtonWidth1;
+  declineTextHeight1 = declineButtonHeight1;
+  //
+  fill(resetWhite);
+  textAlign(CENTER, CENTER);
+  textFont(choice1TextFontBold, startTextSize); //CHANGE TO BOLD
+  text(declineText1, declineTextX1, declineTextY1, declineTextWidth1, declineTextHeight1);
+}
