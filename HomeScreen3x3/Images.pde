@@ -7,8 +7,8 @@ PImage rabbitStandingImage;
 float rabbitStandingImageX, rabbitStandingImageY, rabbitStandingImageWidth, rabbitStandingImageHeight;
 PImage raceImage; //10687379345_555c9954a1_b.jpeg
 float raceImageX, raceImageY, raceImageWidth, raceImageHeight;
-PImage rabbitTurtleImage;
-float rabbitTurtleImageX, rabbitTurtleImageY, rabbitTurtleImageWidth, rabbitTurtleImageHeight;
+PImage pressFImage;
+float pressFImageX, pressFImageY, pressFImageWidth, pressFImageHeight;
 //
 void startImage() {
   startImageX = rect9X5;
@@ -38,9 +38,9 @@ void raceImage() {
   raceImageHeight = rabbitStandingImageHeight;
 }//End raceImage
 //
-void rabbitTurtleImage() {
-  rabbitTurtleImageX = rect9X2+rect9Width*1/10;
-  rabbitTurtleImageY = rect9Y2+acceptChoiceTextHeight1;
-  rabbitTurtleImageWidth = rect9Width*4/5;
-  rabbitTurtleImageHeight = rect9Height*1/2;
+void pressFImage() {
+  pressFImageX = rect9X2*11/10;
+  pressFImageY = rect9Y2+acceptChoiceTextHeight1;
+  pressFImageWidth = rect9Width*4/5;
+  pressFImageHeight = rect9Height*19/30;
 }//End rabbitTurtleImage

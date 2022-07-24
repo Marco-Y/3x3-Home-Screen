@@ -9,14 +9,16 @@ String choice1Text1 = "You died and reincarnated into a turtle";
 float choice1TextX1, choice1TextY1, choice1TextWidth1, choice1TextHeight1;
 String okText4 = "OK BRUH";
 float okTextX4, okTextY4, okTextWidth4, okTextHeight4;
-String choice1Text2 = "A rabbit stood in front of you and said \n 'Fat dude over there wanna battle?'";
+String choice1Text2 = "A rabbit stood in front of you and said \n 'Hey faat dude wanna battle?'";
 float choice1TextX2, choice1TextY2, choice1TextWidth2, choice1TextHeight2;
 String acceptText1 = "Accept";
 float acceptTextX1, acceptTextY1, acceptTextWidth1, acceptTextHeight1;
 String declineText1 = "Decline";
 float declineTextX1, declineTextY1, declineTextWidth1, declineTextHeight1;
-String acceptChoiceText1 = "'You have earned my respect with your bravery. One shall not harm you.'";
+String acceptChoiceText1 = "You died in the battle";
 float acceptChoiceTextX1, acceptChoiceTextY1, acceptChoiceTextWidth1, acceptChoiceTextHeight1;
+String ripText1 = "RIP";
+float ripTextX1, ripTextY1, ripTextWidth1, ripTextHeight1;
 //
 void startText1() {
   //Population
@@ -117,11 +119,24 @@ void acceptChoiceText1() {
   acceptChoiceTextX1 = rect9X2;
   acceptChoiceTextY1 = rect9Y2;
   acceptChoiceTextWidth1 = rect9Width;
-  acceptChoiceTextHeight1 = rect9Height*1/3;
+  acceptChoiceTextHeight1 = rect9Height*1/5;
   //
   fill(black);
   textAlign(CENTER, CENTER);
-  textFont(choice1TextFont1, startTextSize); //CHANGE TO BOLD
+  textFont(choice1TextFont1, startTextSize);
   text(acceptChoiceText1, acceptChoiceTextX1, acceptChoiceTextY1, acceptChoiceTextWidth1, acceptChoiceTextHeight1);
   fill(resetWhite);
 }//End acceptChoiceText1()
+void ripText1() {
+  //Population
+  ripTextX1 = ripButtonX1;
+  ripTextY1 = ripButtonY1;
+  ripTextWidth1 = ripButtonWidth1;
+  ripTextHeight1 = ripButtonHeight1;
+  //
+  fill(black);
+  textAlign(CENTER, TOP);
+  textFont(startTextFont1, startTextSize);
+  text(ripText1, ripTextX1, ripTextY1, ripTextWidth1, ripTextHeight1);
+  fill(resetWhite);
+}

@@ -1,5 +1,5 @@
 //Global Variables
-color buttonFill, resetWhite=#FFFFFF, black=#000000, red=#FF0000, green=#00FF00, yellow=#FFFF00;
+color buttonFill, resetWhite=#FFFFFF, black=#000000, red=#FF0000, green=#00FF00, yellow=#FFFF00, brown=#643200;
 Boolean startButton1ON=false, startButton2ON=false, okButton4ON=false, acceptButton1ON=false;
 //
 void setup() {
@@ -35,6 +35,13 @@ void draw() {
   rect(startX2, startY2, startButtonWidth2, startButtonHeight2);
   //
   fill(resetWhite);
+  //
+  startImage();
+  startImage= loadImage("../Images Used/495468.png"); //width 512 height 512
+  image(startImage, startImageX, startImageY, startImageWidth, startImageHeight);
+  //
+  startText1();
+  startText2();
   //
   if ( startButton1ON==true ) {
     rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
@@ -77,17 +84,15 @@ void draw() {
   if ( acceptButton1ON==true ) {
     rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
     acceptChoiceText1();
-    rabbitTurtleImage();
-    rabbitTurtleImage= loadImage("../Images Used/rabbit-turtle-tales-discussing-competition-197535962.jpeg");
-    image(rabbitTurtleImage, rabbitTurtleImageX, rabbitTurtleImageY, rabbitTurtleImageWidth, rabbitTurtleImageHeight);
+    pressFImage();
+    pressFImage= loadImage("../Images Used/pressf.jpeg");
+    image(pressFImage, pressFImageX, pressFImageY, pressFImageWidth, pressFImageHeight);
+    fill(brown);
+    rect(ripButtonX1, ripButtonY1, ripButtonWidth1, ripButtonHeight1);
+    fill(resetWhite);
+    ripText1();
   }//End acceptButton1
   //
-  startImage();
-  startImage= loadImage("../Images Used/495468.png"); //width 512 height 512
-  image(startImage, startImageX, startImageY, startImageWidth, startImageHeight);
-  //
-  startText1();
-  startText2();
 }//End draw
 //
 void keyPressed() {
