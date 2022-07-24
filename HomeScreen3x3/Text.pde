@@ -122,6 +122,6 @@ void acceptChoiceText1() {
   fill(black);
   textAlign(CENTER, CENTER);
   textFont(choice1TextFont1, startTextSize); //CHANGE TO BOLD
-  text(declineText1, acceptChoiceTextX1, acceptChoiceTextY1, acceptChoiceTextWidth1, acceptChoiceTextHeight1);
+  text(acceptChoiceText1, acceptChoiceTextX1, acceptChoiceTextY1, acceptChoiceTextWidth1, acceptChoiceTextHeight1);
   fill(resetWhite);
 }//End acceptChoiceText1()

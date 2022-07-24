@@ -1,6 +1,6 @@
 //Global Variables
 color buttonFill, resetWhite=#FFFFFF, black=#000000, red=#FF0000, green=#00FF00, yellow=#FFFF00;
-Boolean startButton1ON=false, startButton2ON=false, okButton4ON=false;
+Boolean startButton1ON=false, startButton2ON=false, okButton4ON=false, acceptButton1ON=false;
 //
 void setup() {
   size(1200, 750);
@@ -33,16 +33,6 @@ void draw() {
   }//End Hover-over
   fill(buttonFill); //2-colors to start , remember nightMode adds choice
   rect(startX2, startY2, startButtonWidth2, startButtonHeight2);
-  /*Hover-over OK BUTTON
-   if ( mouseX> okButtonX4 && mouseX< okButtonX4+okButtonWidth4 && mouseY> okButtonY4 && mouseY< okButtonHeight4 ) {
-   buttonFill = green;
-   } else {
-   buttonFill = red;
-   }//End Hover-over OK BUTTON
-   fill(buttonFill); //2-colors to start , remember nightMode adds choice
-   rect(okButtonX4, okButtonY4, okButtonWidth4, okButtonHeight4);
-   */
-  //
   //
   fill(resetWhite);
   //
@@ -68,21 +58,29 @@ void draw() {
   }//End START Button 2
   //
   if ( okButton4ON==true ) {
-   rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
-   choice1Text2();
-   rabbitStandingImage();
-   rabbitStandingImage= loadImage("../Images Used/standing.jpeg");
-   image(rabbitStandingImage, rabbitStandingImageX, rabbitStandingImageY, rabbitStandingImageWidth, rabbitStandingImageHeight);
-   raceImage();
-   raceImage= loadImage("../Images Used/10687379345_555c9954a1_b.jpeg");
-   image(raceImage, raceImageX, raceImageY, raceImageWidth, raceImageHeight);
-   fill(green);
-   rect(acceptButtonX1, acceptButtonY1, acceptButtonWidth1, acceptButtonHeight1);
-   fill(red);
-   rect(declineButtonX1, declineButtonY1, declineButtonWidth1, declineButtonHeight1);
-   acceptText1();
-   declineText1();
+    rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
+    choice1Text2();
+    rabbitStandingImage();
+    rabbitStandingImage= loadImage("../Images Used/standing.jpeg");
+    image(rabbitStandingImage, rabbitStandingImageX, rabbitStandingImageY, rabbitStandingImageWidth, rabbitStandingImageHeight);
+    raceImage();
+    raceImage= loadImage("../Images Used/10687379345_555c9954a1_b.jpeg");
+    image(raceImage, raceImageX, raceImageY, raceImageWidth, raceImageHeight);
+    fill(green);
+    rect(acceptButtonX1, acceptButtonY1, acceptButtonWidth1, acceptButtonHeight1);
+    fill(red);
+    rect(declineButtonX1, declineButtonY1, declineButtonWidth1, declineButtonHeight1);
+    acceptText1();
+    declineText1();
   }//End okButton 4th rect
+  //
+  if ( acceptButton1ON==true ) {
+    rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
+    acceptChoiceText1();
+    rabbitTurtleImage();
+    rabbitTurtleImage= loadImage("../Images Used/rabbit-turtle-tales-discussing-competition-197535962.jpeg");
+    image(rabbitTurtleImage, rabbitTurtleImageX, rabbitTurtleImageY, rabbitTurtleImageWidth, rabbitTurtleImageHeight);
+  }//End acceptButton1
   //
   startImage();
   startImage= loadImage("../Images Used/495468.png"); //width 512 height 512
@@ -101,6 +99,7 @@ void mousePressed() {
   if ( mouseX>=startX1 && mouseX<=startX1+startButtonWidth1 && mouseY>=startY1 && mouseY<=startY1+startButtonHeight1 ) startButton1ON=true;
   if ( mouseX>=startX2 && mouseX<=startX2+startButtonWidth2 && mouseY>=startY2 && mouseY<=startY1+startButtonHeight2 ) startButton2ON=true;
   if ( mouseX>=okButtonX4 && mouseX<=okButtonX4+okButtonWidth4 && mouseY>=okButtonY4 && mouseY<=okButtonY4+okButtonHeight4 ) okButton4ON=true;
+  if ( mouseX>=acceptButtonX1 && mouseX<=acceptButtonX1+acceptButtonWidth1 && mouseY>=acceptButtonY1 && mouseY<=acceptButtonY1+acceptButtonHeight1 ) acceptButton1ON=true;
 }//End mousePressed
 //
 //End MAIN Program

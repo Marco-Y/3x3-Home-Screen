@@ -52,6 +52,4 @@ void populationVariables() {
   declineButtonY1 = rect9Y1+rect9Height*5/6;
   declineButtonWidth1 = rect9Width/2;
   declineButtonHeight1 = rect9Height*1/6;
-  //
-  
 }

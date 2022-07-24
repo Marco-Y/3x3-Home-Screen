@@ -39,8 +39,8 @@ void raceImage() {
 }//End raceImage
 //
 void rabbitTurtleImage() {
-  rabbitTurtleImageX = ;
-  rabbitTurtleImageY = ;
-  rabbitTurtleImageWidth = ;
-  rabbitTurtleImageHeight = ;
+  rabbitTurtleImageX = rect9X2+rect9Width*1/10;
+  rabbitTurtleImageY = rect9Y2+acceptChoiceTextHeight1;
+  rabbitTurtleImageWidth = rect9Width*4/5;
+  rabbitTurtleImageHeight = rect9Height*1/2;
 }//End rabbitTurtleImage
