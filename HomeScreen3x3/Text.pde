@@ -1,8 +1,8 @@
 //Global Variables
-int startTextSize = 25, smallerTextSize = 20;
+int startTextSize = 25, smallerTextSize = 20, biggerTextSize = 35;
+PFont startTextFont1, choice1TextFont1, choice1TextFontBold, impactTextFont;
 String startText1 = "Choose this";
 float startTextX1, startTextY1, startTextWidth1, startTextHeight1;
-PFont startTextFont1, choice1TextFont1, choice1TextFontBold;
 String startText2 = "or this";
 float startTextX2, startTextY2, startTextWidth2, startTextHeight2;
 String choice1Text1 = "You died and reincarnated into a turtle";
@@ -23,6 +23,8 @@ String declineChoiceText1 = "The rabbit said that you're a coward \n and left, y
 float declineChoiceTextX1, declineChoiceTextY1, declineChoiceTextWidth1, declineChoiceTextHeight1;
 String ripText2 = "RIP";
 float ripTextX2, ripTextY2, ripTextWidth2, ripTextHeight2;
+String respectText1 = "Respect";
+float respectTextX1, respectTextY1, respectTextWidth1, respectTextHeight1;
 //
 void startText1() {
   //Population
@@ -171,5 +173,19 @@ void ripText2() {
   textFont(startTextFont1, startTextSize);
   text(ripText2, ripTextX2, ripTextY2, ripTextWidth2, ripTextHeight2);
   fill(resetWhite);
+}//End ripText1
+//
+void respectText1() {
+  //Population
+  respectTextX1 = rect9X2;
+  respectTextY1 = rect9Y2;
+  respectTextWidth1 = rect9Width;
+  respectTextHeight1 = rect9Height;
+  impactTextFont = createFont("Impact", 281);
+  //
+  fill(resetWhite);
+  textAlign(CENTER, CENTER);
+  textFont(impactTextFont, biggerTextSize);
+  text(respectText1, respectTextX1, respectTextY1, respectTextWidth1, respectTextHeight1);
 }//End ripText1
 //

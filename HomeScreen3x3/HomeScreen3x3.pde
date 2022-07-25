@@ -1,6 +1,7 @@
 //Global Variables
-color buttonFill, resetWhite=#FFFFFF, black=#000000, red=#FF0000, green=#00FF00, yellow=#FFFF00, brown=#643200;
+color buttonFill, resetWhite=#FFFFFF, black=#000000, red=#FF0000, green=#00FF00, yellow=#FFFF00, brown=#643200, backgroundColor;
 Boolean startButton1ON=false, startButton2ON=false, okButton4ON=false, acceptButton1ON=false, declineButton1ON=false;
+int h = hour();
 //
 void setup() {
   size(1200, 750);
@@ -14,11 +15,17 @@ void setup() {
   rect(rect9X7, rect9Y7, rect9Width, rect9Height);
   rect(rect9X8, rect9Y8, rect9Width, rect9Height);
   rect(rect9X9, rect9Y9, rect9Width, rect9Height);
+  if (h >= 20 || h<=7) {
+    backgroundColor = color(random(100, 255), random(255), 0);
+  } else {
+    backgroundColor = color(random(100, 255), random(255), random(255));
+  }
+  background(backgroundColor);
 }//End setup
 //
 void draw() {
   //background(random(100, 255), random(0, 255), 0);
-  background(150, 0, 0);
+  //background(150, 0, 0);
   //Hover-over start button 1
   if ( mouseX> startX1 && mouseX< startX1+startButtonWidth1 && mouseY> startY1 && mouseY< startY1+startButtonHeight1 ) {
     buttonFill = black;
@@ -67,7 +74,12 @@ void draw() {
   }//End START Button 2
   //
   if ( okButton4ON==true ) {
+    fill(backgroundColor);
+    noStroke();
     rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
+    rect(rect9X4, rect9Y4, rect9Width, rect9Height);
+    fill(resetWhite);
+    stroke(1);
     choice1Text2();
     rabbitStandingImage();
     rabbitStandingImage= loadImage("../Images Used/standing.jpeg");
@@ -92,6 +104,9 @@ void draw() {
     fill(brown);
     rect(ripButtonX1, ripButtonY1, ripButtonWidth1, ripButtonHeight1);
     fill(resetWhite);
+    if (key=='f' || key=='F') {
+      respectText1();
+    }
     ripText1();
   }//End acceptButton1
   //
