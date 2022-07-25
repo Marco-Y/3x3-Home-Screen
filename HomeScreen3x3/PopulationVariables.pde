@@ -7,6 +7,7 @@ float okButtonX4, okButtonY4, okButtonWidth4, okButtonHeight4;
 float acceptButtonX1, acceptButtonY1, acceptButtonWidth1, acceptButtonHeight1;
 float declineButtonX1, declineButtonY1, declineButtonWidth1, declineButtonHeight1;
 float ripButtonX1, ripButtonY1, ripButtonWidth1, ripButtonHeight1;
+float ripButtonX2, ripButtonY2, ripButtonWidth2, ripButtonHeight2;
 //
 void populationVariables() {
   //rect9
@@ -58,4 +59,8 @@ void populationVariables() {
   ripButtonY1 = rect9Height*5/6;
   ripButtonWidth1 = rect9Width;
   ripButtonHeight1 = rect9Height-ripButtonY1;
+  ripButtonX2 = rect9X3;
+  ripButtonY2 = rect9Height*5/6;
+  ripButtonWidth2 = rect9Width;
+  ripButtonHeight2 = rect9Height-ripButtonY1;
 }

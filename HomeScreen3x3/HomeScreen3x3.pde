@@ -102,9 +102,9 @@ void draw() {
     gravestoneImage= loadImage("../Images Used/gravestone.png");
     image(gravestoneImage, gravestoneImageX, gravestoneImageY, gravestoneImageWidth, gravestoneImageHeight);
     fill(brown);
-    //rect(ripButtonX2, ripButtonY2, ripButtonWidth2, ripButtonHeight2);
+    rect(ripButtonX2, ripButtonY2, ripButtonWidth2, ripButtonHeight2);
     fill(resetWhite);
-    //ripText2();
+    ripText2();
   }//End acceptButton1
   //
 }//End draw

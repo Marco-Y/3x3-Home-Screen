@@ -17,7 +17,7 @@ String declineText1 = "Decline";
 float declineTextX1, declineTextY1, declineTextWidth1, declineTextHeight1;
 String acceptChoiceText1 = "You died in the battle";
 float acceptChoiceTextX1, acceptChoiceTextY1, acceptChoiceTextWidth1, acceptChoiceTextHeight1;
-String ripText1 = "RIP";
+String ripText1 = "F";
 float ripTextX1, ripTextY1, ripTextWidth1, ripTextHeight1;
 String declineChoiceText1 = "The rabbit said that you're a coward \n and left, you died at the age of 100";
 float declineChoiceTextX1, declineChoiceTextY1, declineChoiceTextWidth1, declineChoiceTextHeight1;
@@ -158,7 +158,7 @@ void declineChoiceText1() {
   text(declineChoiceText1, declineChoiceTextX1, declineChoiceTextY1, declineChoiceTextWidth1, declineChoiceTextHeight1);
   fill(resetWhite);
 }//End declineChoiceText1()
-/*
+//
 void ripText2() {
   //Population
   ripTextX2 = ripButtonX2;
@@ -172,4 +172,4 @@ void ripText2() {
   text(ripText2, ripTextX2, ripTextY2, ripTextWidth2, ripTextHeight2);
   fill(resetWhite);
 }//End ripText1
-*/
+//
