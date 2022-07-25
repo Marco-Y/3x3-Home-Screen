@@ -91,6 +91,7 @@ void draw() {
     fill(green);
     rect(acceptButtonX1, acceptButtonY1, acceptButtonWidth1, acceptButtonHeight1);
     fill(red);
+    rect(declineButtonX1, declineButtonY1, declineButtonWidth1, declineButtonHeight1);
     acceptText1();
     declineText1();
   }//End okButton 4th rect
@@ -111,6 +112,7 @@ void draw() {
     }
     rect(choseAcceptTextX1, choseAcceptTextY1, choseAcceptTextWidth1, choseAcceptTextHeight1);
     choseAcceptText1();
+    declineButton1ON=false;
     ripText1();
   }//End acceptButton1
   //
@@ -148,8 +150,8 @@ void mousePressed() {
   if ( mouseX>=startX1 && mouseX<=startX1+startButtonWidth1 && mouseY>=startY1 && mouseY<=startY1+startButtonHeight1 ) startButton1ON=true;
   if ( mouseX>=startX2 && mouseX<=startX2+startButtonWidth2 && mouseY>=startY2 && mouseY<=startY1+startButtonHeight2 ) startButton2ON=true;
   if ( mouseX>=okButtonX4 && mouseX<=okButtonX4+okButtonWidth4 && mouseY>=okButtonY4 && mouseY<=okButtonY4+okButtonHeight4 ) okButton4ON=true;
-  if ( mouseX>=acceptButtonX1 && mouseX<=acceptButtonX1+acceptButtonWidth1 && mouseY>=acceptButtonY1 && mouseY<=acceptButtonY1+acceptButtonHeight1 ) acceptButton1ON=true;
-  if ( mouseX>=declineButtonX1 && mouseX<=declineButtonX1+declineButtonWidth1 && mouseY>=declineButtonY1 && mouseY<=declineButtonY1+declineButtonHeight1 ) declineButton1ON=true;
+  if ( mouseX>=acceptButtonX1 && mouseX<=acceptButtonX1+acceptButtonWidth1 && mouseY>=acceptButtonY1 && mouseY<=acceptButtonY1+acceptButtonHeight1 ) {acceptButton1ON=true; declineButton1ON=false;}
+  if ( mouseX>=declineButtonX1 && mouseX<=declineButtonX1+declineButtonWidth1 && mouseY>=declineButtonY1 && mouseY<=declineButtonY1+declineButtonHeight1 ) {declineButton1ON=true; acceptButton1ON=false;}
 }//End mousePressed
 //
 //End MAIN Program
