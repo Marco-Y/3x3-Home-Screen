@@ -1,6 +1,6 @@
 //Global Variables
 color buttonFill, resetWhite=#FFFFFF, black=#000000, red=#FF0000, green=#00FF00, yellow=#FFFF00, brown=#643200, backgroundColor;
-Boolean startButton1ON=false, startButton2ON=false, okButton4ON=false, acceptButton1ON=false, declineButton1ON=false;
+Boolean startButton1ON=false, startButton2ON=false, okButton4ON=false, acceptButton1ON=false, declineButton1ON=false, okButton7ON=false, okButton8ON=false;
 int h = hour();
 //
 void setup() {
@@ -23,8 +23,10 @@ void setup() {
   rect(rect9X9, rect9Y9, rect9Width, rect9Height);
   if (h >= 20 || h<=7) {
     backgroundColor = color(random(100, 255), random(255), 0);
+    println("nightMode ON");
   } else {
     backgroundColor = color(random(100, 255), random(255), random(255));
+    println("nightMode OFF");
   }
   background(backgroundColor);
 }//End setup
@@ -145,48 +147,64 @@ void draw() {
   //Second Start Choice
   //
   if ( startButton2ON==true ) {
-    rect( startX1, startY1, startButtonWidth1, startButtonHeight1 );
-  }//End START Button 2
-  //
-}//End draw
-//
-void keyPressed() {
-}//End keyPressed
-//
-void mousePressed() {
-  startButton1ON=false;
-  startButton2ON=false;
-  okButton4ON=false;
-  acceptButton1ON=false;
-  declineButton1ON=false;
-  if ( mouseX>=startX1 && mouseX<=startX1+startButtonWidth1 && mouseY>=startY1 && mouseY<=startY1+startButtonHeight1 ) startButton1ON=true;
-  if ( mouseX>=startX2 && mouseX<=startX2+startButtonWidth2 && mouseY>=startY2 && mouseY<=startY1+startButtonHeight2 ) startButton2ON=true;
-  if ( mouseX>=okButtonX4 && mouseX<=okButtonX4+okButtonWidth4 && mouseY>=okButtonY4 && mouseY<=okButtonY4+okButtonHeight4 ) okButton4ON=true;
-  if ( mouseX>=acceptButtonX1 && mouseX<=acceptButtonX1+acceptButtonWidth1 && mouseY>=acceptButtonY1 && mouseY<=acceptButtonY1+acceptButtonHeight1 ) {
-    acceptButton1ON=true;
-    declineButton1ON=false;
-  }
-  if ( mouseX>=declineButtonX1 && mouseX<=declineButtonX1+declineButtonWidth1 && mouseY>=declineButtonY1 && mouseY<=declineButtonY1+declineButtonHeight1 ) {
-    declineButton1ON=true;
-    acceptButton1ON=false;
-  }
-  if ( mouseX> resetButtonX && mouseX< resetButtonX+resetButtonWidth && mouseY> resetButtonY && mouseY< resetButtonY+resetButtonHeight ) {
     fill(backgroundColor);
-    rect(rect9X1, rect9Y1, rect9Width, rect9Height);
-    rect(rect9X2, rect9Y2, rect9Width, rect9Height);
-    rect(rect9X3, rect9Y3, rect9Width, rect9Height);
-    rect(rect9X4, rect9Y4, rect9Width, rect9Height);
-    rect(rect9X6, rect9Y6, rect9Width, rect9Height);
-    rect(rect9X7, rect9Y7, rect9Width, rect9Height);
-    rect(rect9X8, rect9Y8, rect9Width, rect9Height);
-    rect(rect9X9, rect9Y9, rect9Width, rect9Height);
-  }
-}//End mousePressed
-//
-//End MAIN Program
-/*  fill(backgroundColor);
- noStroke();
- rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
- rect(rect9X4, rect9Y4, rect9Width, rect9Height);
- fill(resetWhite);
- stroke(1);*/
+    rect( startX1, startY1, startButtonWidth1, startButtonHeight1 );
+    fill(resetWhite);
+    givemoneyImage();
+    givemoneyImage= loadImage("../Images Used/givemoney.jpeg");
+    image(givemoneyImage, givemoneyImageX, givemoneyImageY, givemoneyImageWidth, givemoneyImageHeight);
+    if ( mouseX> lottoButtonX1 && mouseX< lottoButtonX1+lottoButtonWidth1 && mouseY> lottoButtonY1 && mouseY< lottoButtonY1+lottoButtonHeight1 ) {
+      buttonFill = green;
+    } else {
+      buttonFill = yellow;
+    }
+      fill(buttonFill);
+      rect(lottoButtonX1, lottoButtonY1, lottoButtonWidth1, lottoButtonHeight1);
+      fill(resetWhite);
+      lottoText1();
+      okText7();
+    }//End START Button 2
+    //
+  }//End draw
+  //
+  void keyPressed() {
+  }//End keyPressed
+  //
+  void mousePressed() {
+    startButton1ON=false;
+    startButton2ON=false;
+    okButton4ON=false;
+    acceptButton1ON=false;
+    declineButton1ON=false;
+    if ( mouseX>=startX1 && mouseX<=startX1+startButtonWidth1 && mouseY>=startY1 && mouseY<=startY1+startButtonHeight1 ) startButton1ON=true;
+    if ( mouseX>=startX2 && mouseX<=startX2+startButtonWidth2 && mouseY>=startY2 && mouseY<=startY1+startButtonHeight2 ) startButton2ON=true;
+    if ( mouseX>=okButtonX4 && mouseX<=okButtonX4+okButtonWidth4 && mouseY>=okButtonY4 && mouseY<=okButtonY4+okButtonHeight4 ) okButton4ON=true;
+    if ( mouseX>=acceptButtonX1 && mouseX<=acceptButtonX1+acceptButtonWidth1 && mouseY>=acceptButtonY1 && mouseY<=acceptButtonY1+acceptButtonHeight1 ) {
+      acceptButton1ON=true;
+      declineButton1ON=false;
+    }
+    if ( mouseX>=declineButtonX1 && mouseX<=declineButtonX1+declineButtonWidth1 && mouseY>=declineButtonY1 && mouseY<=declineButtonY1+declineButtonHeight1 ) {
+      declineButton1ON=true;
+      acceptButton1ON=false;
+    }
+    if ( mouseX> resetButtonX && mouseX< resetButtonX+resetButtonWidth && mouseY> resetButtonY && mouseY< resetButtonY+resetButtonHeight ) {
+      fill(backgroundColor);
+      rect(rect9X1, rect9Y1, rect9Width, rect9Height);
+      rect(rect9X2, rect9Y2, rect9Width, rect9Height);
+      rect(rect9X3, rect9Y3, rect9Width, rect9Height);
+      rect(rect9X4, rect9Y4, rect9Width, rect9Height);
+      rect(rect9X6, rect9Y6, rect9Width, rect9Height);
+      rect(rect9X7, rect9Y7, rect9Width, rect9Height);
+      rect(rect9X8, rect9Y8, rect9Width, rect9Height);
+      rect(rect9X9, rect9Y9, rect9Width, rect9Height);
+    }
+    if ( mouseX> lottoButtonX1 && mouseX< lottoButtonX1+lottoButtonWidth1 && mouseY> lottoButtonY1 && mouseY< lottoButtonY1+lottoButtonHeight1 );
+  }//End mousePressed
+  //
+  //End MAIN Program
+  /*  fill(backgroundColor);
+   noStroke();
+   rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
+   rect(rect9X4, rect9Y4, rect9Width, rect9Height);
+   fill(resetWhite);
+   stroke(1);*/

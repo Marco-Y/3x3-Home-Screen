@@ -11,6 +11,10 @@ PImage pressFImage;
 float pressFImageX, pressFImageY, pressFImageWidth, pressFImageHeight;
 PImage gravestoneImage;
 float gravestoneImageX, gravestoneImageY, gravestoneImageWidth, gravestoneImageHeight;
+PImage givemoneyImage;
+float givemoneyImageX, givemoneyImageY, givemoneyImageWidth, givemoneyImageHeight;
+PImage lotteryImage;
+float lotteryImageX, lotteryImageY, lotteryImageWidth, lotteryImageHeight;
 //
 void startImage() {
   startImageX = rect9X5;
@@ -52,4 +56,18 @@ void gravestoneImage() {
   gravestoneImageY = rect9Y3+declineChoiceTextHeight1;
   gravestoneImageWidth = rect9Width*3/5;
   gravestoneImageHeight = rect9Height*19/30;
+}
+//
+void givemoneyImage() {
+  givemoneyImageX = rect9X7;
+  givemoneyImageY = rect9Y7;
+  givemoneyImageWidth = rect9Width;
+  givemoneyImageHeight = rect9Height;
+}
+//
+void lotteryImage() {
+  lotteryImageX = rect9X8;
+  lotteryImageY = rect9Y8;
+  lotteryImageWidth = rect9Width;
+  lotteryImageHeight = rect9Height;
 }

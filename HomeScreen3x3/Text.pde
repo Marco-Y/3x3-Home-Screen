@@ -31,6 +31,10 @@ String choseDeclineText1 = "You chose Decline";
 float choseDeclineTextX2, choseDeclineTextY2, choseDeclineTextWidth2, choseDeclineTextHeight2;*/
 String resetText = "RESET";
 float resetTextX, resetTextY, resetTextWidth, resetTextHeight;
+String lottoText1 = "You bought the lotto";
+float lottoTextX1, lottoTextY1, lottoTextWidth1, lottoTextHeight1;
+String okText7 = "OK";
+float okTextX7, okTextY7, okTextWidth7, okTextHeight7;
 //
 void startText1() {
   //Population
@@ -222,3 +226,30 @@ void resetText() {
   textFont(startTextFont1, biggerTextSize);
   text(resetText, resetTextX, resetTextY, resetTextWidth, resetTextHeight);
 }
+//
+void lottoText1() {
+  //Population
+  lottoTextX1 = rect9X7;
+  lottoTextY1 = rect9Y7; 
+  lottoTextWidth1 = rect9Width;
+  lottoTextHeight1 = rect9Height;
+  //
+  textAlign(CENTER, TOP);
+  textFont(startTextFont1, startTextSize);
+  text(lottoText1, lottoTextX1, lottoTextY1, lottoTextWidth1, lottoTextHeight1);
+}
+//
+void okText7() {
+  //Population
+  okTextX7 = lottoButtonX1;
+  okTextY7 = lottoButtonY1;
+  okTextWidth7 = lottoButtonWidth1;
+  okTextHeight7 = lottoButtonHeight1;
+  //
+  fill(black);
+  textAlign(CENTER, CENTER);
+  textFont(startTextFont1, biggerTextSize);
+  text(okText7, okTextX7, okTextY7, okTextWidth7, okTextHeight7);
+  fill(resetWhite);
+}//End choice1Text1
+//
