@@ -25,10 +25,12 @@ String ripText2 = "RIP";
 float ripTextX2, ripTextY2, ripTextWidth2, ripTextHeight2;
 String respectText1 = "Respect";
 float respectTextX1, respectTextY1, respectTextWidth1, respectTextHeight1;
-String choseAcceptText1 = "You chose Accept";
+/*String choseAcceptText1 = "You chose Accept";
 float choseAcceptTextX1, choseAcceptTextY1, choseAcceptTextWidth1, choseAcceptTextHeight1;
 String choseDeclineText1 = "You chose Decline";
-float choseDeclineTextX2, choseDeclineTextY2, choseDeclineTextWidth2, choseDeclineTextHeight2;
+float choseDeclineTextX2, choseDeclineTextY2, choseDeclineTextWidth2, choseDeclineTextHeight2;*/
+String resetText = "RESET";
+float resetTextX, resetTextY, resetTextWidth, resetTextHeight;
 //
 void startText1() {
   //Population
@@ -38,8 +40,8 @@ void startText1() {
   startTextHeight1 = startButtonHeight1;
   startTextFont1 = createFont("TimesNewRomanPS-BoldItalicMT", 600);
   //
-  String[] fontList = PFont.list(); //To list all fonts available on OS
-  printArray(fontList); //For Listing all possible fonts to choose from, then createFont
+  //String[] fontList = PFont.list(); //To list all fonts available on OS
+  //printArray(fontList); //For Listing all possible fonts to choose from, then createFont
   textAlign(CENTER, CENTER);
   textFont(startTextFont1, startTextSize);
   text(startText1, startTextX1, startTextY1, startTextWidth1, startTextHeight1);
@@ -195,7 +197,7 @@ void respectText1() {
   text(respectText1, respectTextX1, respectTextY1, respectTextWidth1, respectTextHeight1);
 }//End ripText1
 //
-void choseAcceptText1() {
+/*void choseAcceptText1() {
   //Population
   choseAcceptTextX1 = rect9X1+rect9Width*1/2;
   choseAcceptTextY1 = rabbitStandingImageY;
@@ -207,5 +209,16 @@ void choseAcceptText1() {
   textFont(startTextFont1, startTextSize);
   text(choseAcceptText1, choseAcceptTextX1, choseAcceptTextY1, choseAcceptTextWidth1, choseAcceptTextHeight1);
   fill(resetWhite);
-}//End ripText1
+}//End ripText1*/
 //
+void resetText() {
+  //Population
+  resetTextX = resetButtonX;
+  resetTextY = resetButtonY;
+  resetTextWidth = resetButtonWidth;
+  resetTextHeight = resetButtonHeight;
+  //
+  textAlign(CENTER, CENTER);
+  textFont(startTextFont1, biggerTextSize);
+  text(resetText, resetTextX, resetTextY, resetTextWidth, resetTextHeight);
+}
