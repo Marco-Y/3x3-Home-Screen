@@ -5,6 +5,12 @@ int h = hour();
 //
 void setup() {
   size(1200, 750);
+  if ( width > displayWidth || height > displayHeight ) {
+    //CANVAS Too Big
+    println("CANVAS needed to be readjusted to fit on your monitor.");
+  } else {
+    println("CANVAS is Good to go on your display.");
+  }//End CANVAS in Display Checker
   populationVariables();
   rect(rect9X1, rect9Y1, rect9Width, rect9Height);
   rect(rect9X2, rect9Y2, rect9Width, rect9Height);
@@ -104,13 +110,11 @@ void draw() {
     if (key=='f' || key=='F') {
       respectText1();
     }
-    rect(choseAcceptTextX1, choseAcceptTextY1, choseAcceptTextWidth1, choseAcceptTextHeight1);
-    choseAcceptText1();
-    declineButton1ON=false;
+    //rect(choseAcceptTextX1, choseAcceptTextY1, choseAcceptTextWidth1, choseAcceptTextHeight1);
+    //choseAcceptText1();
     ripText1();
-  }//End acceptButton1
-  //
-  if ( declineButton1ON==true ) {
+  } else {
+    acceptButton1ON=false;
     fill(backgroundColor);
     rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
     fill(resetWhite);
@@ -121,37 +125,76 @@ void draw() {
     fill(brown);
     rect(ripButtonX2, ripButtonY2, ripButtonWidth2, ripButtonHeight2);
     fill(resetWhite);
+    //rect(choseDeclineTextX2, choseDeclineTextY2, choseDeclineTextWidth2, choseDeclineTextHeight2);
+    //choseDeclineText2();
     ripText2();
-  }//End acceptButton1
+  }
+
+  if ( declineButton1ON==true ) {
+    acceptButton1ON=false;
+    fill(backgroundColor);
+    rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
+    fill(resetWhite);
+    declineChoiceText1();
+    gravestoneImage();
+    gravestoneImage= loadImage("../Images Used/gravestone.png");
+    image(gravestoneImage, gravestoneImageX, gravestoneImageY, gravestoneImageWidth, gravestoneImageHeight);
+    fill(brown);
+    rect(ripButtonX2, ripButtonY2, ripButtonWidth2, ripButtonHeight2);
+    fill(resetWhite);
+    //rect(choseDeclineTextX2, choseDeclineTextY2, choseDeclineTextWidth2, choseDeclineTextHeight2);
+    //choseDeclineText2();
+    ripText2();
+  } else {
+    fill(backgroundColor);
+    rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
+    fill(resetWhite);
+    acceptChoiceText1();
+    pressFImage();
+    pressFImage= loadImage("../Images Used/pressf.jpeg");
+    image(pressFImage, pressFImageX, pressFImageY, pressFImageWidth, pressFImageHeight);
+    fill(brown);
+    rect(ripButtonX1, ripButtonY1, ripButtonWidth1, ripButtonHeight1);
+    fill(resetWhite);
+    if (key=='f' || key=='F') {
+      respectText1();
+    }
+  }
+    //
+    //Second Start Choice
+    //
+    if ( startButton2ON==true ) {
+      rect( startX1, startY1, startButtonWidth1, startButtonHeight1 );
+    }//End START Button 2
+    //
+  }//End draw
   //
-  //Second Start Choice
+  void keyPressed() {
+  }//End keyPressed
   //
-  if ( startButton2ON==true ) {
-    rect( startX1, startY1, startButtonWidth1, startButtonHeight1 );
-  }//End START Button 2
+  void mousePressed() {
+    startButton1ON=false;
+    startButton2ON=false;
+    okButton4ON=false;
+    acceptButton1ON=false;
+    declineButton1ON=false;
+    if ( mouseX>=startX1 && mouseX<=startX1+startButtonWidth1 && mouseY>=startY1 && mouseY<=startY1+startButtonHeight1 ) startButton1ON=true;
+    if ( mouseX>=startX2 && mouseX<=startX2+startButtonWidth2 && mouseY>=startY2 && mouseY<=startY1+startButtonHeight2 ) startButton2ON=true;
+    if ( mouseX>=okButtonX4 && mouseX<=okButtonX4+okButtonWidth4 && mouseY>=okButtonY4 && mouseY<=okButtonY4+okButtonHeight4 ) okButton4ON=true;
+    if ( mouseX>=acceptButtonX1 && mouseX<=acceptButtonX1+acceptButtonWidth1 && mouseY>=acceptButtonY1 && mouseY<=acceptButtonY1+acceptButtonHeight1 ) {
+      acceptButton1ON=true;
+      declineButton1ON=false;
+    }
+    if ( mouseX>=declineButtonX1 && mouseX<=declineButtonX1+declineButtonWidth1 && mouseY>=declineButtonY1 && mouseY<=declineButtonY1+declineButtonHeight1 ) {
+      declineButton1ON=true;
+      acceptButton1ON=false;
+    }
+  }//End mousePressed
   //
-}//End draw
-//
-void keyPressed() {
-}//End keyPressed
-//
-void mousePressed() {
-  startButton1ON=false;
-  startButton2ON=false;
-  okButton4ON=false;
-  acceptButton1ON=false;
-  declineButton1ON=false;
-  if ( mouseX>=startX1 && mouseX<=startX1+startButtonWidth1 && mouseY>=startY1 && mouseY<=startY1+startButtonHeight1 ) startButton1ON=true;
-  if ( mouseX>=startX2 && mouseX<=startX2+startButtonWidth2 && mouseY>=startY2 && mouseY<=startY1+startButtonHeight2 ) startButton2ON=true;
-  if ( mouseX>=okButtonX4 && mouseX<=okButtonX4+okButtonWidth4 && mouseY>=okButtonY4 && mouseY<=okButtonY4+okButtonHeight4 ) okButton4ON=true;
-  if ( mouseX>=acceptButtonX1 && mouseX<=acceptButtonX1+acceptButtonWidth1 && mouseY>=acceptButtonY1 && mouseY<=acceptButtonY1+acceptButtonHeight1 ) {acceptButton1ON=true; declineButton1ON=false;}
-  if ( mouseX>=declineButtonX1 && mouseX<=declineButtonX1+declineButtonWidth1 && mouseY>=declineButtonY1 && mouseY<=declineButtonY1+declineButtonHeight1 ) {declineButton1ON=true; acceptButton1ON=false;}
-}//End mousePressed
-//
-//End MAIN Program
-/*  fill(backgroundColor);
- noStroke();
- rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
- rect(rect9X4, rect9Y4, rect9Width, rect9Height);
- fill(resetWhite);
- stroke(1);*/
+  //End MAIN Program
+  /*  fill(backgroundColor);
+   noStroke();
+   rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
+   rect(rect9X4, rect9Y4, rect9Width, rect9Height);
+   fill(resetWhite);
+   stroke(1);*/

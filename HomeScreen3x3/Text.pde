@@ -27,6 +27,8 @@ String respectText1 = "Respect";
 float respectTextX1, respectTextY1, respectTextWidth1, respectTextHeight1;
 String choseAcceptText1 = "You chose Accept";
 float choseAcceptTextX1, choseAcceptTextY1, choseAcceptTextWidth1, choseAcceptTextHeight1;
+String choseDeclineText1 = "You chose Decline";
+float choseDeclineTextX2, choseDeclineTextY2, choseDeclineTextWidth2, choseDeclineTextHeight2;
 //
 void startText1() {
   //Population
@@ -36,6 +38,8 @@ void startText1() {
   startTextHeight1 = startButtonHeight1;
   startTextFont1 = createFont("TimesNewRomanPS-BoldItalicMT", 600);
   //
+  String[] fontList = PFont.list(); //To list all fonts available on OS
+  printArray(fontList); //For Listing all possible fonts to choose from, then createFont
   textAlign(CENTER, CENTER);
   textFont(startTextFont1, startTextSize);
   text(startText1, startTextX1, startTextY1, startTextWidth1, startTextHeight1);
