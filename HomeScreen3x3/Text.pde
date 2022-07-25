@@ -1,6 +1,6 @@
 //Global Variables
-int startTextSize = 25, smallerTextSize = 20, biggerTextSize = 35;
-PFont startTextFont1, choice1TextFont1, choice1TextFontBold, impactTextFont;
+int startTextSize = 25, smallerTextSize = 20, biggerTextSize = 35, ultimateSize = 50;
+PFont startTextFont1, choice1TextFont1, choice1TextFontBold, impactTextFont, lottoTextFont2;
 String startText1 = "Choose this";
 float startTextX1, startTextY1, startTextWidth1, startTextHeight1;
 String startText2 = "or this";
@@ -35,6 +35,12 @@ String lottoText1 = "You bought the lotto";
 float lottoTextX1, lottoTextY1, lottoTextWidth1, lottoTextHeight1;
 String okText7 = "OK";
 float okTextX7, okTextY7, okTextWidth7, okTextHeight7;
+String lottoText2 = "You won a million";
+float lottoTextX2, lottoTextY2, lottoTextWidth2, lottoTextHeight2;
+String okText8 = "NICE";
+float okTextX8, okTextY8, okTextWidth8, okTextHeight8;
+String lottoText3 = "You got robbed and lost everything, RIP";
+float lottoTextX3, lottoTextY3, lottoTextWidth3, lottoTextHeight3;
 //
 void startText1() {
   //Population
@@ -236,7 +242,9 @@ void lottoText1() {
   //
   textAlign(CENTER, TOP);
   textFont(startTextFont1, startTextSize);
+  fill(red);
   text(lottoText1, lottoTextX1, lottoTextY1, lottoTextWidth1, lottoTextHeight1);
+  fill(resetWhite);
 }
 //
 void okText7() {
@@ -251,5 +259,46 @@ void okText7() {
   textFont(startTextFont1, biggerTextSize);
   text(okText7, okTextX7, okTextY7, okTextWidth7, okTextHeight7);
   fill(resetWhite);
-}//End choice1Text1
+}
 //
+void lottoText2() {
+  //Population
+  lottoTextX2 = rect9X8;
+  lottoTextY2 = rect9Y8; 
+  lottoTextWidth2 = rect9Width;
+  lottoTextHeight2 = rect9Height;
+  lottoTextFont2= createFont("Impact", 281);
+  //
+  textAlign(CENTER, CENTER);
+  textFont(lottoTextFont2, ultimateSize);
+  fill(resetWhite);
+  text(lottoText2, lottoTextX2, lottoTextY2, lottoTextWidth2, lottoTextHeight2);
+}
+//
+void okText8() {
+  //Population
+  okTextX8 = lottoButtonX2;
+  okTextY8 = lottoButtonY2;
+  okTextWidth8 = lottoButtonWidth2;
+  okTextHeight8 = lottoButtonHeight2;
+  //
+  fill(black);
+  textAlign(CENTER, CENTER);
+  textFont(startTextFont1, biggerTextSize);
+  text(okText8, okTextX8, okTextY8, okTextWidth8, okTextHeight8);
+  fill(resetWhite);
+}
+//
+void lottoText3() {
+  //Population
+  lottoTextX3 = rect9X9;
+  lottoTextY3 = rect9Y9; 
+  lottoTextWidth3 = rect9Width;
+  lottoTextHeight3 = rect9Height;
+  //
+  textAlign(CENTER, TOP);
+  textFont(startTextFont1, startTextSize);
+  fill(red);
+  text(lottoText3, lottoTextX3, lottoTextY3, lottoTextWidth3, lottoTextHeight3);
+  fill(resetWhite);
+}

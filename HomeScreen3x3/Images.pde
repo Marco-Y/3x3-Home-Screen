@@ -15,6 +15,8 @@ PImage givemoneyImage;
 float givemoneyImageX, givemoneyImageY, givemoneyImageWidth, givemoneyImageHeight;
 PImage lotteryImage;
 float lotteryImageX, lotteryImageY, lotteryImageWidth, lotteryImageHeight;
+PImage robberImage;
+float robberImageX, robberImageY, robberImageWidth, robberImageHeight;
 //
 void startImage() {
   startImageX = rect9X5;
@@ -70,4 +72,11 @@ void lotteryImage() {
   lotteryImageY = rect9Y8;
   lotteryImageWidth = rect9Width;
   lotteryImageHeight = rect9Height;
+}
+//
+void robberImage() {
+  robberImageX = rect9X9;
+  robberImageY = rect9Y9;
+  robberImageWidth = rect9Width;
+  robberImageHeight = rect9Height;
 }
