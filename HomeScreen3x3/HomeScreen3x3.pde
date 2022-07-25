@@ -52,8 +52,12 @@ void draw() {
   startText1();
   startText2();
   //
+  //First Start Choice
+  //
   if ( startButton1ON==true ) {
+    fill(backgroundColor);
     rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
+    fill(resetWhite);
     choice1Text1();
     //Hover-over OK BUTTON
     if ( mouseX> okButtonX4 && mouseX< okButtonX4+okButtonWidth4 && mouseY> okButtonY4 && mouseY< okButtonY4+okButtonHeight4 ) {
@@ -75,11 +79,8 @@ void draw() {
   //
   if ( okButton4ON==true ) {
     fill(backgroundColor);
-    noStroke();
     rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
-    rect(rect9X4, rect9Y4, rect9Width, rect9Height);
     fill(resetWhite);
-    stroke(1);
     choice1Text2();
     rabbitStandingImage();
     rabbitStandingImage= loadImage("../Images Used/standing.jpeg");
@@ -90,13 +91,14 @@ void draw() {
     fill(green);
     rect(acceptButtonX1, acceptButtonY1, acceptButtonWidth1, acceptButtonHeight1);
     fill(red);
-    rect(declineButtonX1, declineButtonY1, declineButtonWidth1, declineButtonHeight1);
     acceptText1();
     declineText1();
   }//End okButton 4th rect
   //
   if ( acceptButton1ON==true ) {
+    fill(backgroundColor);
     rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
+    fill(resetWhite);
     acceptChoiceText1();
     pressFImage();
     pressFImage= loadImage("../Images Used/pressf.jpeg");
@@ -107,11 +109,15 @@ void draw() {
     if (key=='f' || key=='F') {
       respectText1();
     }
+    rect(choseAcceptTextX1, choseAcceptTextY1, choseAcceptTextWidth1, choseAcceptTextHeight1);
+    choseAcceptText1();
     ripText1();
   }//End acceptButton1
   //
   if ( declineButton1ON==true ) {
+    fill(backgroundColor);
     rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
+    fill(resetWhite);
     declineChoiceText1();
     gravestoneImage();
     gravestoneImage= loadImage("../Images Used/gravestone.png");
@@ -121,6 +127,12 @@ void draw() {
     fill(resetWhite);
     ripText2();
   }//End acceptButton1
+  //
+  //Second Start Choice
+  //
+  if ( startButton2ON==true ) {
+    rect( startX1, startY1, startButtonWidth1, startButtonHeight1 );
+  }//End START Button 2
   //
 }//End draw
 //
@@ -141,3 +153,9 @@ void mousePressed() {
 }//End mousePressed
 //
 //End MAIN Program
+/*  fill(backgroundColor);
+ noStroke();
+ rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
+ rect(rect9X4, rect9Y4, rect9Width, rect9Height);
+ fill(resetWhite);
+ stroke(1);*/

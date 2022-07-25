@@ -25,6 +25,8 @@ String ripText2 = "RIP";
 float ripTextX2, ripTextY2, ripTextWidth2, ripTextHeight2;
 String respectText1 = "Respect";
 float respectTextX1, respectTextY1, respectTextWidth1, respectTextHeight1;
+String choseAcceptText1 = "You chose Accept";
+float choseAcceptTextX1, choseAcceptTextY1, choseAcceptTextWidth1, choseAcceptTextHeight1;
 //
 void startText1() {
   //Population
@@ -187,5 +189,19 @@ void respectText1() {
   textAlign(CENTER, CENTER);
   textFont(impactTextFont, biggerTextSize);
   text(respectText1, respectTextX1, respectTextY1, respectTextWidth1, respectTextHeight1);
+}//End ripText1
+//
+void choseAcceptText1() {
+  //Population
+  choseAcceptTextX1 = rect9X1+rect9Width*1/2;
+  choseAcceptTextY1 = rabbitStandingImageY;
+  choseAcceptTextWidth1 = rect9Width/2;
+  choseAcceptTextHeight1 = rect9Height*2/3;
+  //
+  fill(black);
+  textAlign(CENTER, CENTER);
+  textFont(startTextFont1, startTextSize);
+  text(choseAcceptText1, choseAcceptTextX1, choseAcceptTextY1, choseAcceptTextWidth1, choseAcceptTextHeight1);
+  fill(resetWhite);
 }//End ripText1
 //

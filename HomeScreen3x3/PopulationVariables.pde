@@ -55,12 +55,12 @@ void populationVariables() {
   declineButtonWidth1 = rect9Width/2;
   declineButtonHeight1 = rect9Height*1/6;
   //
-  ripButtonX1 = rect9X2;
+  ripButtonX1 = rect9X2+rect9Width*1/10;
   ripButtonY1 = rect9Height*5/6;
-  ripButtonWidth1 = rect9Width;
+  ripButtonWidth1 = rect9Width*4/5;
   ripButtonHeight1 = rect9Height-ripButtonY1;
-  ripButtonX2 = rect9X3;
+  ripButtonX2 = rect9X3+rect9Width*1/10;
   ripButtonY2 = rect9Height*5/6;
-  ripButtonWidth2 = rect9Width;
-  ripButtonHeight2 = rect9Height-ripButtonY1;
+  ripButtonWidth2 = rect9Width*4/5;
+  ripButtonHeight2 = rect9Height-ripButtonY2;
 }
