@@ -234,9 +234,3 @@ void mousePressed() {
 }//End mousePressed
 //
 //End MAIN Program
-/*  fill(backgroundColor);
- noStroke();
- rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
- rect(rect9X4, rect9Y4, rect9Width, rect9Height);
- fill(resetWhite);
- stroke(1);*/

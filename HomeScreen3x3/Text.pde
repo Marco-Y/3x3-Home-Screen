@@ -25,10 +25,6 @@ String ripText2 = "RIP";
 float ripTextX2, ripTextY2, ripTextWidth2, ripTextHeight2;
 String respectText1 = "Respect";
 float respectTextX1, respectTextY1, respectTextWidth1, respectTextHeight1;
-/*String choseAcceptText1 = "You chose Accept";
-float choseAcceptTextX1, choseAcceptTextY1, choseAcceptTextWidth1, choseAcceptTextHeight1;
-String choseDeclineText1 = "You chose Decline";
-float choseDeclineTextX2, choseDeclineTextY2, choseDeclineTextWidth2, choseDeclineTextHeight2;*/
 String resetText = "RESET";
 float resetTextX, resetTextY, resetTextWidth, resetTextHeight;
 String lottoText1 = "You bought the lotto";
