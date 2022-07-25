@@ -24,8 +24,6 @@ void setup() {
 }//End setup
 //
 void draw() {
-  //background(random(100, 255), random(0, 255), 0);
-  //background(150, 0, 0);
   //Hover-over start button 1
   if ( mouseX> startX1 && mouseX< startX1+startButtonWidth1 && mouseY> startY1 && mouseY< startY1+startButtonHeight1 ) {
     buttonFill = black;
@@ -72,10 +70,6 @@ void draw() {
     image(oogwayImage, oogwayImageX, oogwayImageY, oogwayImageWidth, oogwayImageHeight);
     okText4();
   }//End START Button 1
-  //
-  if ( startButton2ON==true ) {
-    rect( startX1, startY1, startButtonWidth1, startButtonHeight1 );
-  }//End START Button 2
   //
   if ( okButton4ON==true ) {
     fill(backgroundColor);
