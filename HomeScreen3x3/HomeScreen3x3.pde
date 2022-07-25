@@ -1,6 +1,6 @@
 //Global Variables
 color buttonFill, resetWhite=#FFFFFF, black=#000000, red=#FF0000, green=#00FF00, yellow=#FFFF00, brown=#643200;
-Boolean startButton1ON=false, startButton2ON=false, okButton4ON=false, acceptButton1ON=false;
+Boolean startButton1ON=false, startButton2ON=false, okButton4ON=false, acceptButton1ON=false, declineButton1ON=false;
 //
 void setup() {
   size(1200, 750);
@@ -17,6 +17,8 @@ void setup() {
 }//End setup
 //
 void draw() {
+  //background(random(100, 255), random(0, 255), 0);
+  background(150, 0, 0);
   //Hover-over start button 1
   if ( mouseX> startX1 && mouseX< startX1+startButtonWidth1 && mouseY> startY1 && mouseY< startY1+startButtonHeight1 ) {
     buttonFill = black;
@@ -93,6 +95,18 @@ void draw() {
     ripText1();
   }//End acceptButton1
   //
+  if ( declineButton1ON==true ) {
+    rect( startX2, startY2, startButtonWidth2, startButtonHeight2 );
+    declineChoiceText1();
+    gravestoneImage();
+    gravestoneImage= loadImage("../Images Used/gravestone.png");
+    image(gravestoneImage, gravestoneImageX, gravestoneImageY, gravestoneImageWidth, gravestoneImageHeight);
+    fill(brown);
+    //rect(ripButtonX2, ripButtonY2, ripButtonWidth2, ripButtonHeight2);
+    fill(resetWhite);
+    //ripText2();
+  }//End acceptButton1
+  //
 }//End draw
 //
 void keyPressed() {
@@ -101,10 +115,14 @@ void keyPressed() {
 void mousePressed() {
   startButton1ON=false;
   startButton2ON=false;
+  okButton4ON=false;
+  acceptButton1ON=false;
+  declineButton1ON=false;
   if ( mouseX>=startX1 && mouseX<=startX1+startButtonWidth1 && mouseY>=startY1 && mouseY<=startY1+startButtonHeight1 ) startButton1ON=true;
   if ( mouseX>=startX2 && mouseX<=startX2+startButtonWidth2 && mouseY>=startY2 && mouseY<=startY1+startButtonHeight2 ) startButton2ON=true;
   if ( mouseX>=okButtonX4 && mouseX<=okButtonX4+okButtonWidth4 && mouseY>=okButtonY4 && mouseY<=okButtonY4+okButtonHeight4 ) okButton4ON=true;
   if ( mouseX>=acceptButtonX1 && mouseX<=acceptButtonX1+acceptButtonWidth1 && mouseY>=acceptButtonY1 && mouseY<=acceptButtonY1+acceptButtonHeight1 ) acceptButton1ON=true;
+  if ( mouseX>=declineButtonX1 && mouseX<=declineButtonX1+declineButtonWidth1 && mouseY>=declineButtonY1 && mouseY<=declineButtonY1+declineButtonHeight1 ) declineButton1ON=true;
 }//End mousePressed
 //
 //End MAIN Program

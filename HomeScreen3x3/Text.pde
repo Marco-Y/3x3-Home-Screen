@@ -9,7 +9,7 @@ String choice1Text1 = "You died and reincarnated into a turtle";
 float choice1TextX1, choice1TextY1, choice1TextWidth1, choice1TextHeight1;
 String okText4 = "OK BRUH";
 float okTextX4, okTextY4, okTextWidth4, okTextHeight4;
-String choice1Text2 = "A rabbit stood in front of you and said \n 'Hey faat dude wanna battle?'";
+String choice1Text2 = "A rabbit stood in front of you and said \n 'Hey fat dude wanna battle?'";
 float choice1TextX2, choice1TextY2, choice1TextWidth2, choice1TextHeight2;
 String acceptText1 = "Accept";
 float acceptTextX1, acceptTextY1, acceptTextWidth1, acceptTextHeight1;
@@ -19,6 +19,10 @@ String acceptChoiceText1 = "You died in the battle";
 float acceptChoiceTextX1, acceptChoiceTextY1, acceptChoiceTextWidth1, acceptChoiceTextHeight1;
 String ripText1 = "RIP";
 float ripTextX1, ripTextY1, ripTextWidth1, ripTextHeight1;
+String declineChoiceText1 = "The rabbit said that you're a coward \n and left, you died at the age of 100";
+float declineChoiceTextX1, declineChoiceTextY1, declineChoiceTextWidth1, declineChoiceTextHeight1;
+String ripText2 = "RIP";
+float ripTextX2, ripTextY2, ripTextWidth2, ripTextHeight2;
 //
 void startText1() {
   //Population
@@ -127,6 +131,7 @@ void acceptChoiceText1() {
   text(acceptChoiceText1, acceptChoiceTextX1, acceptChoiceTextY1, acceptChoiceTextWidth1, acceptChoiceTextHeight1);
   fill(resetWhite);
 }//End acceptChoiceText1()
+//
 void ripText1() {
   //Population
   ripTextX1 = ripButtonX1;
@@ -135,8 +140,36 @@ void ripText1() {
   ripTextHeight1 = ripButtonHeight1;
   //
   fill(black);
-  textAlign(CENTER, TOP);
+  textAlign(CENTER, CENTER);
   textFont(startTextFont1, startTextSize);
   text(ripText1, ripTextX1, ripTextY1, ripTextWidth1, ripTextHeight1);
   fill(resetWhite);
-}
+}//End ripText1
+//
+void declineChoiceText1() {
+  declineChoiceTextX1 = rect9X3;
+  declineChoiceTextY1 = rect9Y3;
+  declineChoiceTextWidth1 = rect9Width;
+  declineChoiceTextHeight1 = rect9Height*1/3;
+  //
+  fill(black);
+  textAlign(CENTER, CENTER);
+  textFont(choice1TextFont1, startTextSize);
+  text(declineChoiceText1, declineChoiceTextX1, declineChoiceTextY1, declineChoiceTextWidth1, declineChoiceTextHeight1);
+  fill(resetWhite);
+}//End declineChoiceText1()
+/*
+void ripText2() {
+  //Population
+  ripTextX2 = ripButtonX2;
+  ripTextY2 = ripButtonY2;
+  ripTextWidth2 = ripButtonWidth2;
+  ripTextHeight2 = ripButtonHeight2;
+  //
+  fill(black);
+  textAlign(CENTER, CENTER);
+  textFont(startTextFont1, startTextSize);
+  text(ripText2, ripTextX2, ripTextY2, ripTextWidth2, ripTextHeight2);
+  fill(resetWhite);
+}//End ripText1
+*/

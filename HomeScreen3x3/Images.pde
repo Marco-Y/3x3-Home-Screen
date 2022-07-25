@@ -9,6 +9,8 @@ PImage raceImage; //10687379345_555c9954a1_b.jpeg
 float raceImageX, raceImageY, raceImageWidth, raceImageHeight;
 PImage pressFImage;
 float pressFImageX, pressFImageY, pressFImageWidth, pressFImageHeight;
+PImage gravestoneImage;
+float gravestoneImageX, gravestoneImageY, gravestoneImageWidth, gravestoneImageHeight;
 //
 void startImage() {
   startImageX = rect9X5;
@@ -44,3 +46,10 @@ void pressFImage() {
   pressFImageWidth = rect9Width*4/5;
   pressFImageHeight = rect9Height*19/30;
 }//End rabbitTurtleImage
+//
+void gravestoneImage() {
+  gravestoneImageX = rect9X3+rect9Width*1/5;
+  gravestoneImageY = rect9Y3+declineChoiceTextHeight1;
+  gravestoneImageWidth = rect9Width*3/5;
+  gravestoneImageHeight = rect9Height*19/30;
+}
